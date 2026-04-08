@@ -1,0 +1,72 @@
+.task-form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.task-form-container h2 {
+  font-size: 1.5rem;
+  color: var(--text-main);
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--panel-border);
+}
+
+.task-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.smart-tip-box {
+  margin-top: -0.5rem;
+  margin-bottom: 1.5rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  line-height: 1.4;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  animation: slideDown 0.3s ease forwards;
+}
+
+.tip-positive {
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  color: var(--priority-low); /* green */
+}
+
+.tip-warning {
+  background: rgba(245, 158, 11, 0.1);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  color: var(--priority-medium); /* orange */
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.submit-btn {
+  margin-top: 1rem;
+  justify-content: center;
+}

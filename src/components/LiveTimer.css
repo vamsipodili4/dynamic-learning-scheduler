@@ -1,0 +1,60 @@
+.live-timer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  border-left: 4px solid var(--accent-pink);
+  margin-bottom: 2rem;
+  animation: pulse-border 2s infinite;
+}
+
+@keyframes pulse-border {
+  0% { box-shadow: 0 0 0 0 rgba(244, 114, 182, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(244, 114, 182, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(244, 114, 182, 0); }
+}
+
+.timer-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.live-indicator {
+  color: var(--accent-pink);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  animation: blink 1s infinite alternate;
+}
+
+@keyframes blink {
+  from { opacity: 1; }
+  to { opacity: 0.5; }
+}
+
+.timer-display {
+  font-family: 'Outfit', monospace;
+  font-size: 4rem;
+  font-weight: 700;
+  background: linear-gradient(to right, var(--accent-pink), var(--accent-violet));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1;
+}
+
+.timer-actions {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  justify-content: center;
+}
+
+.stop-btn {
+  color: var(--priority-medium);
+}
+.complete-btn {
+  background: linear-gradient(135deg, var(--priority-low), #059669);
+}

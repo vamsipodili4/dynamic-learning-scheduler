@@ -1,0 +1,18 @@
+PROBLEM STATEMENT: The Inflexibility of Traditional Study Scheduling
+
+Modern students face a critical efficiency crisis when managing their self-study routines. Currently, students rely on static scheduling tools (like Google Calendar, basic to-do lists, or physical planners) to map out their syllabus preparation. However, these tools suffer from several fatal flaws:
+
+1. The "Domino Effect" of Static Calendars
+When a student inevitably misses a scheduled study block due to exhaustion, unexpected events, or underestimating the time required, traditional schedules break. Every subsequent task is pushed back manually, causing overwhelming administrative friction, anxiety, and the eventual abandonment of the schedule entirely.
+
+2. Blind Time Estimations
+Students are notoriously poor at estimating how long it will take to grasp complex subjects (e.g., allocating 2 hours for Calculus, but it actually takes 4). Current tools do not track empirical "learning velocity", leaving students to repeat the same estimation errors repeatedly over the semester.
+
+3. Lack of Friction in Distraction
+In a digital learning environment, distractions are only one click away. Traditional productivity timers rely solely on self-discipline; they do not enforce environmental accountability or actively penalize users for switching tabs (e.g., opening YouTube or social media).
+
+4. Low Engagement & Burnout
+Reading a static list of pending tasks induces burnout. Without immediate, gamified feedback loops—such as earning XP, visualizing real-time metrics, or receiving celebratory completion feedback—long-term study stamina drops drastically.
+
+THE SOLUTION (Dynamic Learning Scheduler):
+There is an urgent need for a Serverless, Adaptive Engine that treats a schedule as a living entity. The system must autonomously recalculate and shift missed tasks into future free slots, track individual learning velocities to automatically adjust future time-allocations, enforce strict environmental focus via browser API traps, and wrap the entire experience in a dopamine-inducing, highly aesthetic user interface.

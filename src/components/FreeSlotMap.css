@@ -1,0 +1,92 @@
+.free-slot-map {
+  padding: 1rem;
+  border-radius: 12px;
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  min-width: 250px;
+  max-width: 300px;
+}
+
+.mt-3 {
+  margin-top: 1.5rem;
+}
+
+.free-slot-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.free-slot-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(128, 128, 128, 0.05);
+  border: 1px dashed var(--panel-border);
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  min-height: 40px;
+}
+
+.free-slot-time {
+  color: var(--text-muted);
+  font-family: var(--font-heading);
+}
+
+.claim-btn {
+  background: rgba(128, 128, 128, 0.1);
+  color: var(--accent-cyan);
+  border: 1px solid var(--panel-border);
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.claim-btn:hover {
+  background: var(--accent-cyan);
+  color: white;
+}
+
+.free-slot-input-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+  margin-left: 0.5rem;
+}
+
+.free-slot-input-row input {
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px;
+  color: var(--text-main);
+  font-size: 0.8rem;
+  width: 100%;
+}
+
+.free-slot-input-row input:focus {
+  outline: none;
+  border-color: var(--accent-cyan);
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.2rem;
+  border-radius: 4px;
+}
+
+.icon-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}

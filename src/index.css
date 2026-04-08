@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  /* Premium Dark Spline Palette (Default for Landing/Setup) */
+  --bg-dark: #120B08;
+  --bg-gradient: radial-gradient(circle at center, #2e1005 0%, #120B08 60%, #0a0502 100%);
+  --panel-bg: rgba(0, 0, 0, 0.4);
+  --panel-border: rgba(255, 215, 0, 0.15); /* Soft gold border */
+  
+  /* Text defaults: restored to high contrast */
+  --text-main: #ffffff;
+  --text-muted: #a1a1aa;
+  
+  /* Spline Vibrant Accents */
+  --accent-cyan: #FFD700;   /* Golden White-hot center */
+  --accent-violet: #E62E00; /* Vermillion / Fire Red */
+  --accent-pink: #FF6B00;   /* Vibrant Orange */
+  
+  --priority-high: #ff1c1c; /* Sharp Red */
+  --priority-medium: #FFD700; /* Gold */
+  --priority-low: #10b981;
+
+  /* Typography */
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Shadows & Glassmorphism */
+  --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+  --glass-blur: blur(16px);
+}
+
+body.theme-light-brown {
+  /* Sunset Quartz Glassmorphism Theme */
+  --bg-dark: #fbf5f3;
+  --bg-gradient: linear-gradient(135deg, #fcebe4 0%, #f6ceb7 40%, #e2a386 100%);
+  --panel-bg: rgba(255, 255, 255, 0.4);
+  --panel-border: rgba(255, 255, 255, 0.5);
+  --glass-shadow: 0 12px 36px rgba(226, 163, 134, 0.2);
+  
+  /* Text defaults: highly visible deep warm chocolate/charcoal */
+  --text-main: #0f0a08;
+  --text-muted: #3b211a;
+  
+  caret-color: #3b211a;
+  
+  /* Sunset Quartz Accents! (Warm orange and golden gradients) */
+  --accent-cyan: #dca77a;
+  --accent-violet: #ea936b;
+  --accent-pink: #f69485;
+  
+  --priority-high: #e05e52;
+  --priority-medium: #df9e45;
+  --priority-low: #4aab85;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg-gradient);
+  background-attachment: fixed;
+  color: var(--text-main);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+}
+
+/* Base Glass Panel Utilities */
+.glass-panel {
+  background: var(--panel-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--panel-border);
+  box-shadow: var(--glass-shadow);
+  border-radius: 16px;
+  padding: 1.5rem;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+  transform-style: preserve-3d;
+}
+
+.glass-panel:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px 0 rgba(0, 0, 0, 0.15);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+/* Status Colors */
+.status-pending { border-left: 4px solid var(--accent-violet); }
+.status-completed { border-left: 4px solid var(--priority-low); opacity: 0.7; }
+.status-missed { border-left: 4px solid var(--priority-high); }
+
+/* Buttons */
+.btn {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 117, 140, 0.3); /* Fiery Rose shadow */
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-violet));
+  color: #fff;
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-main);
+}
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+body.theme-light-brown .btn-primary {
+  color: var(--text-main);
+}
+
+body.theme-light-brown .btn-secondary {
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+body.theme-light-brown .btn-secondary:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+/* Form Elements */
+input, select {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.5); /* Default dark mode inputs */
+  border: 1px solid var(--panel-border);
+  color: var(--text-main);
+  font-family: var(--font-body);
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);
+}
+
+body.theme-light-brown input, body.theme-light-brown select {
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+}
+input:focus, select:focus {
+  outline: none;
+  border-color: var(--accent-cyan);
+}
+
+label {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+body:not(.theme-light-brown) {
+  /* Regular spline vignette */
+  background-image: 
+    radial-gradient(circle at 50% 30%, rgba(255, 215, 0, 0.05) 0%, transparent 40%),
+    radial-gradient(circle at 50% 100%, rgba(230, 46, 0, 0.05) 0%, transparent 50%);
+}

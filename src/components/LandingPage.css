@@ -1,0 +1,121 @@
+.landing-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--bg-gradient);
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.landing-content {
+  text-align: center;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  max-width: 800px;
+}
+
+.landing-icon-group {
+  display: flex;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.hero-icon {
+  color: var(--text-main);
+  filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.4));
+}
+
+.hero-icon-accent {
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  color: var(--accent-cyan);
+  filter: drop-shadow(0 0 20px var(--accent-cyan));
+}
+
+.hero-title {
+  font-size: 5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #fff 0%, var(--accent-cyan) 50%, var(--accent-violet) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+  font-size: 1.4rem;
+  color: var(--text-muted);
+  margin-bottom: 3rem;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.btn-hero {
+  font-size: 1.25rem;
+  padding: 1.25rem 3rem;
+  border-radius: 50px;
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-violet));
+  box-shadow: 0 10px 30px -10px var(--accent-cyan);
+}
+
+.btn-hero:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 20px 40px -10px var(--accent-violet);
+}
+
+/* Background Blobs for Landing */
+.blobs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.blob {
+  position: absolute;
+  filter: blur(100px);
+  opacity: 0.5;
+  border-radius: 50%;
+  animation: float 20s infinite ease-in-out;
+}
+
+.blob-1 {
+  top: -10%;
+  left: -10%;
+  width: 600px;
+  height: 600px;
+  background: rgba(34, 211, 238, 0.3);
+}
+
+.blob-2 {
+  bottom: -10%;
+  right: -10%;
+  width: 800px;
+  height: 800px;
+  background: rgba(129, 140, 248, 0.3);
+  animation-delay: -10s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(50px, 50px) scale(1.1); }
+}
+
+@media (max-width: 768px) {
+  .hero-title { font-size: 3rem; }
+  .hero-subtitle { font-size: 1.1rem; }
+}
