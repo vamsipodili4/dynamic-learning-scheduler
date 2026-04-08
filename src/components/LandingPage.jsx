@@ -6,9 +6,9 @@ const LandingPage = ({ onEnterApp }) => {
   return (
     <div className="landing-container animate-fade-in">
       <div className="landing-content">
-        <div className="landing-icon-group">
-          <BookOpen className="hero-icon" size={64} />
-          <Zap className="hero-icon-accent" size={48} />
+        <div className="landing-icon-group" style={{ position: 'relative', display: 'inline-block', width: '80px', height: '80px', marginBottom: '2rem' }}>
+          <BookOpen className="hero-icon" size={80} />
+          <Zap className="hero-icon-accent" size={40} style={{ position: 'absolute', bottom: '-4px', right: '-12px' }} />
         </div>
         
         <h1 className="hero-title">Dynamic Learning Scheduler</h1>
